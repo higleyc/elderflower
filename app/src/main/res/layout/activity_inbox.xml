@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
-    <!-- TODO list component -->
-
+    android:orientation="vertical">
 
     <EditText
         android:layout_width="match_parent"
@@ -15,7 +13,14 @@
         android:text=""
         android:ems="10"
         android:id="@+id/entryEditText"
-        android:layout_weight="1"
         android:hint="@string/entry_hint"
         android:imeOptions="actionGo" />
+
+    <fragment
+        android:name="com.higley.elderflower.fragments.InboxNoteListFragment"
+        android:id="@+id/listFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
 </LinearLayout>
