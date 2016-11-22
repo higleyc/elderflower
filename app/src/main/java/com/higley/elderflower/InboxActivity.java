@@ -58,8 +58,8 @@ public class InboxActivity extends AppCompatActivity {
 
         // Store the note and make toast
         String uid = Authentication.getCurrentUid();
-        String noteKey = database.child("notes").child(uid).push().getKey();
-        database.child("notes").child(uid).child(noteKey).setValue(note);
+        String noteKey = database.child("notes").child(uid).child("inbox").push().getKey();
+        database.child("notes").child(uid).child("inbox").child(noteKey).setValue(note);
         Toast.makeText(getApplicationContext(), "Note added", Toast.LENGTH_SHORT).show();
 
         // Reset UI

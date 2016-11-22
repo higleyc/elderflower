@@ -8,11 +8,6 @@ public class Note {
 
     public Note() { }
 
-    public Note(String title, String text) {
-        this.title = title;
-        this.text = text;
-    }
-
     public static Note createNoteFromSimpleEntry(String input) {
         Note note = new Note();
         note.text = input;
